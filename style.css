@@ -5,3 +5,42 @@
     padding: 0;
     margin: 0;
 }
+
+html{
+    font-size: 10px;
+}
+
+/* menu */
+
+nav{
+    opacity: .7;
+}
+
+/* header */ 
+
+header .jumbotron{
+    background-image: url(btk-images/header-3.jpg);
+    background-size: cover;
+    background-position: 25% 50%;
+    padding-top: 12rem;
+    height: 40rem;
+    opacity: 0.9;
+    z-index: -1;
+}
+
+header h2{
+    text-transform: uppercase;
+    color: black;
+}
+
+/* breadcrumb */
+
+nav ol.breadcrumb{
+    margin-top: -2.5%;
+    opacity: .7;
+    background-color: black !important;
+}
+
+.col-md-8 img:hover{
+    opacity: .8;
+}
