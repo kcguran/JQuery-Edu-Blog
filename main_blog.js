@@ -38,3 +38,17 @@ $(function (){
         $("#myUye").modal();
     });
 })
+
+/* form validation Jquery */
+
+$(function () {
+    $("#btnSubmit").click(function() {
+        var email,phone,password;
+        email=$("#user_email").val();
+        phone=$("#user_phone").val();
+        password=$("#user_password").val();
+        if (email=="") {
+            
+        }
+    });
+});
