@@ -13,9 +13,19 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="main_blog.js"></script>
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="55">
 
     <!-- MENU -->
     <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
@@ -27,22 +37,51 @@
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="ml-auto navbar-nav">
                     <li class="nav-item">
-                        <a href="index.htm" class="nav-link active">Home</a>
+                        <a href="#html-btk" class="nav-link active">HTML5</a>
                     </li>
                     <li class="nav-item">
-                        <a href="html5.htm" class="nav-link">HTML5</a>
+                        <a href="#css-btk" class="nav-link">CSS3</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link">CSS3</a>
+                        <a href="#js-btk" class="nav-link">JS</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link">JS</a>
+                        <a href="#jquery-btk" class="nav-link">jQuery</a>
+                    </li>
+                </ul>
+                <ul class="ml-auto navbar-nav">
+                    <li class="nav-item">
+                        <a href="html5.htm" class="nav-link">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">Misyonumuz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">İletişim</a>
+                    </li>
+                    <li class="nav-item">
+                        <button id="btn_giris" class="ml-2 mt-2"><i class="fas fa-user-lock"></i></button>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <div class="modal fade" id="myUye" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismis="modal">&times;</button>
+                    <h4 class="modal-title">Kapat</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        gövde
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <header>
         <div class="jumbotron text-white bg-dark">
             <div class="container">
@@ -59,7 +98,7 @@
             <div class="col-md-8">
                 <div class="card mb-4">
                     <div class="card-header">
-                        <h2>Html5</h2>
+                        <h2 id="html-btk">Html5</h2>
                     </div>
                     <img src="btk-images/doga-1.jpg" alt="" class="card-img-top">
                     <div class="card-body">
@@ -78,7 +117,7 @@
                 </div>
                 <div class="card mb-4">
                     <div class="card-header">
-                        <h2>CSS3</h2>
+                        <h2 id="css-btk">CSS3</h2>
                     </div>
                     <img src="btk-images/doga-2.jpg" alt="" class="card-img-top">
                     <div class="card-body">
@@ -97,7 +136,7 @@
                 </div>
                 <div class="card mb-4">
                     <div class="card-header">
-                        <h2>JS</h2>
+                        <h2 id="js-btk">JS</h2>
                     </div>
                     <img src="btk-images/doga-3.jpg" alt="" class="card-img-top">
                     <div class="card-body">
@@ -116,7 +155,7 @@
                 </div>
                 <div class="card mb-4">
                     <div class="card-header">
-                        <h2>BOOTSTRAP</h2>
+                        <h2 id="jquery-btk">JQUERY</h2>
                     </div>
                     <img src="btk-images/doga-1.jpg" alt="" class="card-img-top">
                     <div class="card-body">
@@ -133,6 +172,64 @@
                     </div>
                     <div style="opacity: 0.6;" class="card-footer">Date 6 Nisan 2022</div>
                 </div>
+
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h2>Table</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover table-dark table-striped">
+                                <caption>Başlık</caption>
+                                <thead>
+                                    <tr>
+                                        <th>1.Alan</th>
+                                        <th>2.Alan</th>
+                                        <th>3.Alan</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Alan</td>
+                                        <td>Alan</td>
+                                        <td>Alan</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Alan</td>
+                                        <td>Alan</td>
+                                        <td>Alan</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Alan</td>
+                                        <td>Alan</td>
+                                        <td>Alan</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Alan</td>
+                                        <td>Alan</td>
+                                        <td>Alan</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td class="text-center" colspan="3">Btk Akademi</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                    <div style="opacity: 0.6;" class="card-footer">Date 6 Nisan 2022</div>
+                </div>
+                <div class="card card-column mb-4">
+                    <div class="bg-danger" style="min-height: 15rem;"></div>
+                    <div class="bg-primary" style="min-height: 15rem;"></div>
+                </div>
+                <div class="card card-column mb-4">
+                    <div class="bg-danger" style="min-height: 15rem;"></div>
+                </div>
+                <div class="card card-column mb-4">
+                    <div class="bg-danger" style="min-height: 15rem;"></div>
+                </div>
             </div>
             <!-- SAĞ TARAF-->
             <div class="col-md-4">
@@ -140,8 +237,8 @@
                     <div class="header">
                         <h6>Arama</h6>
                         <div class="card-body">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Arama Alanı">
+                            <div class="input-group"><i class="fas fa-search mt2 mr-2"></i>
+                                <input id="tags" type="text" class="form-control" placeholder="Arama Alanı">
                             </div>
                         </div>
                     </div>
@@ -188,19 +285,38 @@
                 </div>
             </div>
         </div>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Önceki</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">İleri</a></li>
+            </ul>
+        </nav>
     </main>
+
+    <footer class="text-white bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mt-5 border border-primary">
+                    <ul>
+                        <li><a href="">Deneme2</a></li>
+                        <li><a href="">Deneme3</a></li>
+                        <li><a href="">Deneme4</a></li>
+                        <li><a href="">Deneme5</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 mt-5 border border-danger">
+                    <p>BÜTÜN HAKLAR SAKLIDIR &copy;</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+
 </body>
 
 </html>
